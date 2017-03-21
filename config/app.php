@@ -166,7 +166,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Settisizer\SettisizerServiceProvider::class,
         //
 
         /*
