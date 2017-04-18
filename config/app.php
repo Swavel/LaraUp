@@ -167,6 +167,8 @@ return [
          * Package Service Providers...
          */
         Settisizer\SettisizerServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
         //
 
         /*

@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
     $u = \App\User::all()->first();
-    $u->getMyType();
+    //$u->getMyType();
     /**
      *
      * TODO implement saving method
@@ -24,6 +24,8 @@ Route::get('/', function () {
      * */
 
     $u->setSetting('settingname', 'settingvalue');
+
+    dd($u->getSetting('blah'));
 
     return view('welcome');
 });
