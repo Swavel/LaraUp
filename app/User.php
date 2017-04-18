@@ -4,10 +4,13 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Settisizer\Settisizable;
+use Settisizer\SettisizerTrait;
 
 class User extends Authenticatable
 {
     use Notifiable;
+    use Settisizable;
 
     /**
      * The attributes that are mass assignable.
