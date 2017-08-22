@@ -28,7 +28,7 @@ class GuestbookController extends Controller
     }
 
     public function store(GbEntryRequest $request) {
-        $gbEntry = GbEntry::create($request);
+        $gbEntry = GbEntry::create($request->except('_token'));
         if(Auth::check()) {
             $gbEntry->user()->associate(Auth::user());
         }
