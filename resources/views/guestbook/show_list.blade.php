@@ -8,7 +8,7 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    my list
+                    <h3>@lang('guestbook.pages.list.all_entries')</h3>
                     @if ($errors->any())
                         <div class="alert alert-danger">
                             <ul>
@@ -21,16 +21,19 @@
                     <table>
                         @foreach($entries as $entry)
                             <tr>
-                                <td>{{ $entry->title }}</td>
+                                <td style="width: 200px; font-weight: 900">{{ $entry->title }}</td>
                                 <td>{{ $entry->content }}</td>
                             </tr>
                         @endforeach
                     </table>
 
-                    <form action="{{ route('gb_store_entry') }}" method="post">
+                    <form action="{{ route('gb_store_entry') }}" method="post" class="form-group" style="margin-top: 100px">
                         {{ csrf_field() }}
-                        <input name="title">
-                        <textarea name="content"></textarea>
+                        <h3>@lang('guestbook.pages.list.new_entry')</h3>
+                        <label class="">
+                            <input name="title" class="form-control">
+                        </label>
+                        <textarea name="content" class="form-control"></textarea>
 
                         <input type="submit" class="btn btn-default">
                     </form>

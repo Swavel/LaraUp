@@ -25,6 +25,8 @@ Route::get('/', function () {
 
     $u->setSetting('foo', 'bar');
 
+
+
     return view('welcome');
 });
 
