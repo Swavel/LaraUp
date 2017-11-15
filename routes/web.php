@@ -38,3 +38,8 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('guestbook/list', 'GuestbookController@showList')->name('gb_list');
 Route::post('guestbook/list', 'GuestbookController@store')->name('gb_store_entry');
+
+Route::get('guestbook/settings', 'GuestbookController@showSettings')->name('gb_settings');
+Route::post('guestbook/settings', 'GuestbookController@storeSettings')->name('gb_settings_store');
+
+Route::post('guestbook/settings_private', 'GuestbookController@storeSettingsPrivate')->name('gb_settings_private_store');
