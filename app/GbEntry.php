@@ -22,6 +22,9 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Query\Builder|\App\GbEntry whereUpdatedAt($value)
  * @method static \Illuminate\Database\Query\Builder|\App\GbEntry whereUserId($value)
  * @mixin \Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\GbEntry[] $children
+ * @property-read \App\GbEntry|null $parent
+ * @property-read \App\User|null $user
  */
 class GbEntry extends Model
 {
